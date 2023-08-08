@@ -1,5 +1,5 @@
 body {
-  background-image: url("Sky.jpg");
+  background-image: url("sky.jpg");
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,13 +8,11 @@ font-size: medium;
 }
 .container {
   font-size: small;
-  border: 1px solid #ccc;
+  border: 1px solid #dfdcdd;
   padding: 10px;
   width:40vw;
-  background-color: #f2f2f2;
-  margin: 0 ;
-  margin-top: 0;
-  gap:20px;
+  background-color:#fdf0e7;
+  margin-left: 60px;
 }
 .col-4 {
   flex-basis: calc(30% - 10px); 
@@ -34,40 +32,44 @@ font-size: medium;
 }
 
 
-input[type="text"],
-input[type="email"],
-input[type="date"],
-input[type="number"],
-#tour-package {
+.input {
   padding: 5px;
   border: 1px solid gray;
   border-radius: 5px;
-  width:150px;
-  max-width: 250px;
 }
-input[type="submit"] {
-  background-color: #1b7ced;
+.input:hover{
+  width:200px;
+}
+#submit{
+  background-color: #323133;
   align-items: center;
   width:150px;
   max-width: 200px;
   height: 30px;
   margin-left: 300px;
   margin-top: 20px;
+  font-weight: bold;
+  font-style: italic;
+  color: #fdf8fc;
 }
-#term,
-#avail1,
-#avail2,
-#avail3 {
-  margin-left: 40px;
+#submit:hover{
+  background-color: #a0d6e4;
+}
+.term,.avail{
   margin-bottom: 10px;
+  margin-top: 10px;
 }
+
 label {
   margin-bottom: 30px;
+  font-style:italic;
+  font-weight: bold;
+  font-size: medium;
+  color: #323133;
 }
 option {
   font-size: small;
   width: 300px;
-
 }
 select {
   font-size: small;
@@ -75,38 +77,48 @@ select {
   border: 1px solid gray;
   border-radius: 5px;
   background-color: #fff;
-
+}
+label:hover{
+  font-size: larger;
 }
 .right-element {
   max-width: 400px;
   margin-top: 200px;
-  margin-left: auto;
-  justify-self: end;
+  margin-right:100px;
   position: absolute;
-  right:60px;
+  right:90px;
+  font-size: larger;
+  font-style: oblique;
+  font-weight: 800;
 }
 @media screen and (max-width: 600px) {
-.row{
-  grid-template-columns: 1fr;
-}
+  .container{
+    height: 100%;
+  }
 .right-element {
-  margin-top: 100px;
-  margin-left: auto;
-  max-width: 400px;
+  position: static;
+  font-weight:normal;
+  font-size: small;
+  margin-top: 0;
 }
-
-  .col-4 {
+.row{
+  grid-template-columns: 1ftr;
+  display: grid;
+}
+  .col-4{
     width: 100%;
-
- }
-
+  }
   .col-8 {
-    width: 100%; 
+    width: 100%;
+ }
+  #submit {
+    max-width: 100px;
+    margin-top: 0;
+    margin-left: 0;
+    height: auto;
+    
   }
 
-  input[type="submit"] {
-    max-width: 300px;
-  }
 }
 
   
