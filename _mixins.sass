@@ -1,4 +1,4 @@
-
+@import "variables"
 @mixin flex-center
     display: flex
     justify-content: center
@@ -16,7 +16,7 @@
     border-radius: 5px
 
     &:hover
-      width: 200px
+        width: 200px
 
 @mixin button-styles
     align-items: center
@@ -25,7 +25,23 @@
     color: #fdf8fc
 
     &:hover
-      background-color: #a0d6e4
+        background-color: #a0d6e4
 
 @mixin column($width)
     flex-basis: calc(#{$width} - 10px)
+
+@mixin rightelement
+    max-width: $rightMaxWidth
+    margin-top: $rightTop
+    margin-right: $rightRight
+    position: absolute
+    right: 90px
+    font-size: $rightFont
+    font-style: $rightStyle
+    font-weight: $rightWeight
+
+    @media screen and ($maxwidthmedia)
+        position: static
+        font-weight: normal
+        font-size: $smallFont
+        margin-top: 0

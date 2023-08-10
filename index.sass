@@ -1,46 +1,46 @@
-@import "variable"
-@import "mixin"
+@use "variables"
+@use "mixins"
 
 body
-  @include background-properties($bgImg, no-repeat, cover, fixed)
+  @include mixins.background-properties(variables.$bgImg, no-repeat, cover, fixed)
   box-sizing: border-box
-  font-size: $bodyFont
+  font-size: variables.$bodyFont
 
 .container
-  font-size: $containerFont
+  font-size: variables.$containerFont
   border: 1px solid #dfdcdd
   padding: 10px
   width: 40vw
-  background-color: $containerbg
+  background-color: variables.$containerbg
   margin-left: 60px
 
   @media screen and (max-width: 600px)
     width: 80vw
 
 .col-4
-  @include column(30%)
+  @include mixins.column(30%)
 
 .col-8
-  @include column(50%)
+  @include mixins.column(50%)
 
 .row
-  @include flex-center
+  @include mixins.flex-center
   flex-wrap: wrap
   margin-bottom: 25px
   margin-top: 0
   gap: 20px
 
 .input
-  @include input-styles
+  @include mixins.input-styles
 
 #submit
-  @include button-styles
-  background-color: $primary
-  width: $submitWidth
-  max-width: $submitMaxWidth
-  height: $submitHeight
-  margin-left: $submitLeft
-  margin-top: $submitTop
+  @include mixins.button-styles
+  background-color: variables.$primary
+  width: variables.$submitWidth
+  max-width: variables.$submitMaxWidth
+  height: variables.$submitHeight
+  margin-left: variables.$submitLeft
+  margin-top: variables.$submitTop
 
   @media screen and (max-width: 600px)
     margin-left: 0
@@ -54,16 +54,16 @@ label
   font-style: italic
   font-weight: bold
   font-size: medium
-  color: $primary
+  color: variables.$primary
 
 option
-  font-size: $smallFont
+  font-size: variables.$smallFont
   width: 300px
 
 select
-  font-size: $smallFont
+  font-size: variables.$smallFont
   width: 150px
-  border: 1px solid $inputBorder
+  border: 1px solid variables.$inputBorder
   border-radius: 5px
   background-color: #fff
 
@@ -71,30 +71,4 @@ label:hover
   font-size: larger
 
 .right-element
-  max-width: $rightMaxWidth
-  margin-top: $rightTop
-  margin-right: $rightRight
-  position: absolute
-  right: 90px
-  font-size: $rightFont
-  font-style: $rightStyle
-  font-weight: $rightWeight
-
-  @media screen and ($maxwidthmedia)
-    position: static
-    font-weight: normal
-    font-size: $smallFont
-    margin-top: 0
-
-@media screen and ($maxwidthmedia)
-  .container
-    width: 100%
-
-  .col-4, .col-8
-    width: 100%
-
-  #submit
-    max-width: 100px
-    margin-top: 0
-    margin-left: 0
-    height: auto
+  @include mixins.rightelement
