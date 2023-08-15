@@ -1,4 +1,4 @@
-@import "variables"
+@use "variables"
 @mixin flex-center
     display: flex
     justify-content: center
@@ -30,18 +30,18 @@
 @mixin column($width)
     flex-basis: calc(#{$width} - 10px)
 
-@mixin rightelement
-    max-width: $rightMaxWidth
-    margin-top: $rightTop
-    margin-right: $rightRight
+@mixin Text-style
+    max-width: variables.$rightMaxWidth
+    margin-top: variables.$rightTop
+    margin-right: variables.$rightRight
     position: absolute
     right: 90px
-    font-size: $rightFont
-    font-style: $rightStyle
-    font-weight: $rightWeight
+    font-size: variables.$rightFont
+    font-style: variables.$rightStyle
+    font-weight: variables.$rightWeight
 
-    @media screen and ($maxwidthmedia)
+    @media screen and (variables.$maxwidthmedia)
         position: static
         font-weight: normal
-        font-size: $smallFont
+        font-size: variables.$smallFont
         margin-top: 0
